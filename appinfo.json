@@ -1,14 +1,21 @@
 {
-  "uuid": "7cba71c2-1c3c-4e75-8c19-84c19c7d81ab",
+  "uuid": "1a2b3c4d-5678-9999-tipsytime-watchface",
   "shortName": "TipsyTime",
-  "longName": "Tipsy Time Chaotic Watchface",
-  "companyName": "Indie",
-  "versionLabel": "2.1",
+  "longName": "Tipsy Time",
+  "companyName": "Custom",
+  "versionLabel": "1.0",
+  "sdkVersion": "3",
   "watchapp": {
     "watchface": true
   },
-  "targetPlatforms": [
-    "aplite"
-  ],
-  "sdkVersion": "3"
+  "targetPlatforms": ["aplite"],
+  "resources": {
+    "media": [
+      {
+        "type": "png",
+        "name": "BATTERY_ICON",
+        "file": "battery.png"
+      }
+    ]
+  }
 }
