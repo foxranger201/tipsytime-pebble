@@ -1,19 +1,27 @@
-{
-  "uuid": "8b2f4c4a-9d8b-4b52-9c59-1e6b4d9f8c2a",
-  "shortName": "Tipsy Time",
-  "longName": "Tipsy Time Watchface",
-  "companyName": "Chitraksh",
-  "versionLabel": "1.0",
-  "watchapp": {
-    "watchface": true
-  },
-  "resources": {
-    "media": [
-      {
-        "type": "png",
-        "name": "BATTERY_ICON",
-        "file": "battery.png"
-      }
-    ]
-  }
-}
+name: Build Pebble Watchface
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Pebble SDK
+        run: |
+          sudo apt update
+          sudo apt install -y python3 python3-pip
+          pip3 install pebble-sdk
+
+      - name: Build Watchface
+        run: pebble build
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pbw
+          path: build/*.pbw
