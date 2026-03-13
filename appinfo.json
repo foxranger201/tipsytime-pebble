@@ -1,14 +1,12 @@
 {
-  "uuid": "1a2b3c4d-5678-9999-tipsytime-watchface",
-  "shortName": "TipsyTime",
-  "longName": "Tipsy Time",
-  "companyName": "Custom",
+  "uuid": "8b2f4c4a-9d8b-4b52-9c59-1e6b4d9f8c2a",
+  "shortName": "Tipsy Time",
+  "longName": "Tipsy Time Watchface",
+  "companyName": "Chitraksh",
   "versionLabel": "1.0",
-  "sdkVersion": "3",
   "watchapp": {
     "watchface": true
   },
-  "targetPlatforms": ["aplite"],
   "resources": {
     "media": [
       {
