@@ -1,8 +1,8 @@
 name: Build Pebble Watchface
 
 on:
-  push:
   workflow_dispatch:
+  push:
 
 jobs:
   build:
@@ -12,13 +12,16 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install Pebble SDK
-        run: pip3 install pebble-tool
+        run: |
+          sudo apt update
+          sudo apt install -y python3 python3-pip
+          pip3 install pebble-sdk
 
-      - name: Build
+      - name: Build Watchface
         run: pebble build
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: tipsy-watchface
+          name: pbw
           path: build/*.pbw
