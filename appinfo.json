@@ -1,0 +1,14 @@
+{
+  "uuid": "7cba71c2-1c3c-4e75-8c19-84c19c7d81ab",
+  "shortName": "TipsyTime",
+  "longName": "Tipsy Time Chaotic Watchface",
+  "companyName": "Indie",
+  "versionLabel": "2.1",
+  "watchapp": {
+    "watchface": true
+  },
+  "targetPlatforms": [
+    "aplite"
+  ],
+  "sdkVersion": "3"
+}
